@@ -1,16 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './containers/App';
+import App from './containers/HomePage/App';
 import reportWebVitals from './reportWebVitals';
-import { EmployeeProvider, NavProvider } from './utils/context';
+import { EmployeeProvider} from './utils/context/EmployeeContext';
+import { NavProvider} from './utils/context/NavigationContext';
+import { ModalProvider} from './utils/context/ModalContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>  
     <NavProvider>  
       <EmployeeProvider>
-        <App />
+        <ModalProvider>
+          <App />
+        </ModalProvider>
       </EmployeeProvider>
     </NavProvider>  
   </React.StrictMode>

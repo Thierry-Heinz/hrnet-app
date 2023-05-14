@@ -1,10 +1,13 @@
 import React, { useContext, useRef } from "react";
-import { EmployeeContext } from "../../utils/context";
+import { EmployeeContext } from "../../utils/context/EmployeeContext";
 import { departments } from "./departments";
 import { states } from "./states";
+import { ModalContext } from "../../utils/context/ModalContext";
+import { FormStyled } from "./style";
 
 const Forms = () => {
-  const { employees, setEmployees } = useContext(EmployeeContext);
+  const { handleEmployee } = useContext(EmployeeContext);
+  const { handleModal } = useContext(ModalContext);
   const firstNameRef = useRef();
   const lastNameRef = useRef();
   const birthDateRef = useRef();
@@ -17,53 +20,54 @@ const Forms = () => {
 
   const departmentRef = useRef();
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
-    setEmployees([
-      ...employees,
-      {
-        firstName: firstNameRef.current.value,
-        lastName: lastNameRef.current.value,
-        dateOfBirth: birthDateRef.current.value,
-        startDate: startDateRef.current.value,
-        street: streetRef.current.value,
-        city: cityRef.current.value,
-        state: stateRef.current.value,
-        zipCode: zipCodeRef.current.value,
-        department: departmentRef.current.value
-      }
-    ]);
+    handleEmployee({
+      firstName: firstNameRef.current.value,
+      lastName: lastNameRef.current.value,
+      dateOfBirth: birthDateRef.current.value,
+      startDate: startDateRef.current.value,
+      street: streetRef.current.value,
+      city: cityRef.current.value,
+      state: stateRef.current.value,
+      zipCode: zipCodeRef.current.value,
+      department: departmentRef.current.value,
+    });
+    handleModal();
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <FormStyled onSubmit={handleSubmit}>
       <label htmlFor="firstName">
-        First Name
-        <input ref={firstNameRef} type="text" id="firstName" />
+        <span>First Name</span>
+        <input ref={firstNameRef} type="text" id="firstName" required />
       </label>
       <label htmlFor="lastName">
-        Last Name
-        <input ref={lastNameRef} type="text" id="lastName" />
+        <span>Last Name</span>
+        <input ref={lastNameRef} type="text" id="lastName" required />
       </label>
       <label htmlFor="birthDate">
-        Birth Date
-        <input ref={birthDateRef} type="date" id="birthDate" />
+        <span>Birth Date</span>
+        <input ref={birthDateRef} type="date" id="birthDate" required />
       </label>
       <label htmlFor="startDate">
-        Start Date
-        <input ref={startDateRef} type="date" id="startDate" />
+        <span>Start Date</span>
+        <input ref={startDateRef} type="date" id="startDate" required />
       </label>
 
       <fieldset>
         <legend>Address</legend>
         <label htmlFor="street">
-          <input ref={streetRef} type="text" id="street" />
+          <span>Street</span>
+          <input ref={streetRef} type="text" id="street" required />
         </label>
         <label htmlFor="city">
-          <input ref={cityRef} type="text" id="city" />
+          <span>City</span>
+          <input ref={cityRef} type="text" id="city" required />
         </label>
         <label htmlFor="state">
+          <span>State</span>
           <select ref={stateRef} id="state" name="state">
             {states.map((state, i) => (
               <option key={`${state}-${i}`} value={state.abbreviation}>
@@ -73,11 +77,13 @@ const Forms = () => {
           </select>
         </label>
         <label htmlFor="zipCode">
-          <input ref={zipCodeRef} type="number" id="zipCode" />
+          <span>Zip code</span>
+          <input ref={zipCodeRef} type="number" id="zipCode" required />
         </label>
       </fieldset>
-      <label htmlFor="state">
-        Departement
+
+      <label htmlFor="department">
+        <span>Departement</span>
         <select ref={departmentRef} id="departement" name="departement">
           {departments.map((department, i) => (
             <option key={`${department}-${i}`} value={department.value}>
@@ -88,7 +94,7 @@ const Forms = () => {
       </label>
 
       <input type="submit" value="Save" />
-    </form>
+    </FormStyled>
   );
 };
 export default Forms;

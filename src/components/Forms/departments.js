@@ -5,7 +5,7 @@ export const departments = [
     },
 	 {
         "name": "Marketing",
-        "value": "sales"
+        "value": "marketing"
     },
 	 {
         "name": "Engineering",
