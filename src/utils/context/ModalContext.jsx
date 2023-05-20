@@ -7,7 +7,6 @@ export const ModalProvider = ({ children }) => {
 
   const handleModal = () => {
     setModalOpen(!isModalOpen);
-    console.log("modal called !", isModalOpen);
   };
 
   return (

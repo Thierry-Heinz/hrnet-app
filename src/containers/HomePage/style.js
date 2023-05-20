@@ -44,7 +44,7 @@ export const HeaderStyled = styled.div`
     box-shadow: 0 0 0.5rem "black";
 
     div {
-      background-color: var(--dark-grey);
+      background-color: var(--secondary);
       height: 2px;
       width: 100%;
     }
