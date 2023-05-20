@@ -20,6 +20,11 @@ export const HeaderStyled = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-sizing: border-box;
+
+  @media screen and (max-width: 600px) {
+    padding: 0 2rem;
+  }
 
   h1 {
     font-size: 3rem;

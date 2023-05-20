@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import { EmployeeContext } from "../../utils/context/EmployeeContext";
-import { NavContext } from "../../utils/context/NavigationContext";
 import FakeData from "../../data/example.json";
 
 import { TableGenerator } from "hrnet-tablegenerator";
@@ -48,7 +47,7 @@ const EmployeeListPage = () => {
         label: "Zip Code",
       },
     ],
-    nodes: employees,
+    nodes: FakeData,
   };
 
   return (
