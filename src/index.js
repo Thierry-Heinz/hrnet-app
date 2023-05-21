@@ -1,22 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './containers/HomePage/App';
-import reportWebVitals from './reportWebVitals';
-import { EmployeeProvider} from './utils/context/EmployeeContext';
-import { NavProvider} from './utils/context/NavigationContext';
-import { ModalProvider} from './utils/context/ModalContext';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import reportWebVitals from "./reportWebVitals";
+import { EmployeeProvider } from "./utils/context/EmployeeContext";
+import { ModalProvider } from "./utils/context/ModalContext";
+import { RouterProvider } from "react-router";
+import { router } from "./routes/routes";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>  
-    <NavProvider>  
-      <EmployeeProvider>
-        <ModalProvider>
-          <App />
-        </ModalProvider>
-      </EmployeeProvider>
-    </NavProvider>  
+  <React.StrictMode>
+    <EmployeeProvider>
+      <ModalProvider>
+        <RouterProvider router={router} />
+      </ModalProvider>
+    </EmployeeProvider>
   </React.StrictMode>
 );
 

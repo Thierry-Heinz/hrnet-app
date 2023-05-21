@@ -1,4 +1,10 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
+
+export const WrapperStyled = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
 
 export const MainListPageStyled = styled.main`
   display: flex;
@@ -145,5 +151,15 @@ export const TableGeneratorWrapperStyled = styled.div`
         }
       }
     }
+  }
+`;
+
+export const StyledLink = styled(Link)`
+  color: var(--primary);
+  text-decoration: none;
+  text-align: center;
+  margin-top: 1rem;
+  &:hover {
+    color: var(--secondary);
   }
 `;

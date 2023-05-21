@@ -7,7 +7,7 @@ import {
   WrapperStyled,
   HeaderWrapperStyled,
   HeaderStyled,
-} from "../HomePage/style";
+} from "../../components/Header/style";
 
 const App = () => {
   const { isActive, toggle } = useContext(NavContext);
@@ -24,7 +24,7 @@ const App = () => {
           </button>
         </HeaderStyled>
       </HeaderWrapperStyled>
-      {isActive ? <CreateEmployeePage /> : <EmployeeListPage />}
+      <CreateEmployeePage /> : <EmployeeListPage />}
     </WrapperStyled>
   );
 };

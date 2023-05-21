@@ -1,4 +1,10 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
+
+export const WrapperStyled = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
 
 export const MainCreatePageStyled = styled.main`
   max-width: var(--max-width);
@@ -8,5 +14,15 @@ export const MainCreatePageStyled = styled.main`
 
   @media screen and (max-width: 600px) {
     padding: 0 2rem;
+  }
+`;
+
+export const StyledLink = styled(Link)`
+  color: var(--primary);
+  text-decoration: none;
+  text-align: center;
+  margin-top: 1rem;
+  &:hover {
+    color: var(--secondary);
   }
 `;

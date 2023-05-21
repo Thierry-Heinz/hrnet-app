@@ -1,12 +1,7 @@
 import styled from "styled-components";
 
-export const WrapperStyled = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-
 export const HeaderWrapperStyled = styled.header`
-  background-color: var(--primary);
+  background-color: var(--secondary);
   color: var(--white);
   border-bottom: 1px solid var(--secondary);
   box-shadow: 0 0.25rem 0.5rem var(--light-grey);

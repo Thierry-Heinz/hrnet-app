@@ -2,7 +2,13 @@ import React, { useContext } from "react";
 import { EmployeeContext } from "../../utils/context/EmployeeContext";
 import FakeData from "../../data/example.json";
 import { TableGenerator } from "hrnet-tablegenerator";
-import { MainListPageStyled, TableGeneratorWrapperStyled } from "./style";
+import {
+  MainListPageStyled,
+  StyledLink,
+  TableGeneratorWrapperStyled,
+  WrapperStyled,
+} from "./style";
+import Header from "../../components/Header/Header";
 
 const EmployeeListPage = () => {
   const { employees } = useContext(EmployeeContext);
@@ -50,12 +56,16 @@ const EmployeeListPage = () => {
   };
 
   return (
-    <MainListPageStyled>
-      <h2>All the employees</h2>
-      <TableGeneratorWrapperStyled>
-        <TableGenerator data={tableNodes} />
-      </TableGeneratorWrapperStyled>
-    </MainListPageStyled>
+    <WrapperStyled>
+      <Header />
+      <MainListPageStyled>
+        <h2>All the employees</h2>
+        <TableGeneratorWrapperStyled>
+          <TableGenerator data={tableNodes} />
+        </TableGeneratorWrapperStyled>
+      </MainListPageStyled>
+      <StyledLink to="/">Home</StyledLink>
+    </WrapperStyled>
   );
 };
 export default EmployeeListPage;
