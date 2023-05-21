@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { HeaderWrapperStyled, HeaderStyled } from "./style";
 import { useNavigate } from "react-router";
 
