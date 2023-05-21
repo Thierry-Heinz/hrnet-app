@@ -46,7 +46,7 @@ const EmployeeListPage = () => {
         label: "Zip Code",
       },
     ],
-    nodes: employees,
+    nodes: FakeData,
   };
 
   return (
