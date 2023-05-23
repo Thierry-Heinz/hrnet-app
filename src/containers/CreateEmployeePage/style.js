@@ -18,11 +18,11 @@ export const MainCreatePageStyled = styled.main`
 `;
 
 export const StyledLink = styled(Link)`
-  color: var(--primary);
+  color: var(--grey);
   text-decoration: none;
   text-align: center;
   margin-top: 1rem;
   &:hover {
-    color: var(--secondary);
+    color: var(--dark-grey);
   }
 `;

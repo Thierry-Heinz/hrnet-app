@@ -4994,10 +4994,10 @@ hpack.js@^2.1.6:
     readable-stream "^2.0.1"
     wbuf "^1.1.0"
 
-hrnet-tablegenerator@^0.0.12:
-  version "0.0.12"
-  resolved "https://registry.npmjs.org/hrnet-tablegenerator/-/hrnet-tablegenerator-0.0.12.tgz"
-  integrity sha512-6PmQ6V3pjXyIrQD8qEcl9tE/ZMUWDrL+pDY7dZkcQ6cQ7lrXLNDcjn/RW3vcQ1ifiirjj50A6uKea+gIU9Nw9g==
+hrnet-tablegenerator@^0.0.13:
+  version "0.0.13"
+  resolved "https://registry.npmjs.org/hrnet-tablegenerator/-/hrnet-tablegenerator-0.0.13.tgz"
+  integrity sha512-xXqASvhRSwc8fnVxtCaRo/u3ZyXSnRyBAG7ckVC3wDfn9NXn+zGF1tugte3qRU/zvTlSfNAi0xYzLfTL66AfKg==
   dependencies:
     "@babel/polyfill" "^7.12.1"
     "@testing-library/jest-dom" "^5.14.1"

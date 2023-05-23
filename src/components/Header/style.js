@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const HeaderWrapperStyled = styled.header`
-  background-color: var(--secondary);
+  background-color: var(--dark-grey);
   color: var(--white);
   border-bottom: 1px solid var(--secondary);
   box-shadow: 0 0.25rem 0.5rem var(--light-grey);
@@ -39,7 +39,7 @@ export const HeaderStyled = styled.div`
     box-shadow: 0 0 0.5rem "black";
 
     div {
-      background-color: var(--secondary);
+      background-color: var(--dark-grey);
       height: 2px;
       width: 100%;
     }

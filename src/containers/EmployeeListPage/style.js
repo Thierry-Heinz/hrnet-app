@@ -34,7 +34,7 @@ export const TableGeneratorWrapperStyled = styled.div`
       display: flex;
       justify-content: space-between;
       margin-bottom: 1rem;
-      color: var(--secondary);
+      color: var(--dark-grey);
       #table_length label {
         display: flex;
         gap: 0.5rem;
@@ -55,7 +55,7 @@ export const TableGeneratorWrapperStyled = styled.div`
             font-size: 1rem;
             color: var(--white);
             font-weight: 500;
-            background-color: var(--secondary);
+            background-color: var(--dark-grey);
             padding: 0.25rem;
           }
         }
@@ -88,7 +88,7 @@ export const TableGeneratorWrapperStyled = styled.div`
       display: flex;
       justify-content: space-between;
       margin-top: 2rem;
-      color: var(--secondary);
+      color: var(--dark-grey);
 
       @media screen and (max-width: 800px) {
         flex-direction: column;
@@ -105,8 +105,8 @@ export const TableGeneratorWrapperStyled = styled.div`
           cursor: pointer;
           &:hover {
             color: var(--white);
-            border: 2px solid rgb(95 158 160 / 75%);
-            background-color: rgb(95 158 160 / 75%);
+            border: 2px solid var(--grey);
+            background-color: var(--grey);
           }
         }
         span {
@@ -120,11 +120,11 @@ export const TableGeneratorWrapperStyled = styled.div`
             vertical-align: baseline;
             border-radius: 2rem;
             background-color: var(--white);
-            border: 2px solid var(--secondary);
-            color: var(--secondary);
+            border: 2px solid var(--dark-grey);
+            color: var(--dark-grey);
             &.current {
               color: var(--white);
-              background-color: var(--secondary);
+              background-color: var(--dark-grey);
             }
           }
         }
@@ -136,16 +136,16 @@ export const TableGeneratorWrapperStyled = styled.div`
             vertical-align: baseline;
             border-radius: 2rem;
             background-color: var(--white);
-            border: 2px solid var(--secondary);
-            color: var(--secondary);
+            border: 2px solid var(--dark-grey);
+            color: var(--dark-grey);
             padding: 0 1.5rem;
             &:disabled {
-              color: rgb(95 158 160 / 75%);
-              border: 2px solid rgb(95 158 160 / 75%);
+              color: var(--grey);
+              border: 2px solid var(--grey);
             }
             &:hover {
-              color: var(--secondary);
-              border: 2px solid var(--secondary);
+              color: var(--dark-grey);
+              border: 2px solid var(--dark-grey);
             }
           }
         }
@@ -155,11 +155,11 @@ export const TableGeneratorWrapperStyled = styled.div`
 `;
 
 export const StyledLink = styled(Link)`
-  color: var(--primary);
+  color: var(--grey);
   text-decoration: none;
   text-align: center;
   margin-top: 1rem;
   &:hover {
-    color: var(--secondary);
+    color: var(--dark-grey);
   }
 `;

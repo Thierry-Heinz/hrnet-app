@@ -56,7 +56,7 @@ export const FormStyled = styled.form`
     margin-top: 2em;
     height: 3rem;
     border: none;
-    background-color: var(--secondary);
+    background-color: var(--dark-grey);
     font-weight: 300;
     font-size: 1.5rem;
     color: var(--white);
@@ -66,7 +66,7 @@ export const FormStyled = styled.form`
     &:hover,
     &:active {
       cursor: pointer;
-      background-color: var(--primary);
+      background-color: var(--grey);
     }
   }
 `;
