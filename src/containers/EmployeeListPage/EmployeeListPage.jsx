@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { EmployeeContext } from "../../utils/context/EmployeeContext";
 import FakeData from "../../data/example.json";
 import { TableGenerator } from "hrnet-tablegenerator";
+
 import {
   MainListPageStyled,
   StyledLink,
@@ -52,7 +53,7 @@ const EmployeeListPage = () => {
         label: "Zip Code",
       },
     ],
-    nodes: employees,
+    nodes: FakeData,
   };
 
   return (
